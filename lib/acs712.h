@@ -1,13 +1,16 @@
 #ifndef ACS712
 #define ACS712
 
-class Acs712 {
-  private:
-    unsigned short out_pin;
+class acs712 {
+private:
+  byte pin;
+  acs712() {}
 
-  public:
-    Acs712(unsigned short out_pin);
-    float getCurrent();
+public:
+  acs712( byte pin );
+
+  float getvolts();
+  float getamps();
 
 };
 

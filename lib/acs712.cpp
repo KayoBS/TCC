@@ -1,14 +1,15 @@
 #include "acs712.h"
 
-Acs712::Acs712(unsigned short out_pin) {
-  this->out_pin = out_pin;
-  pinMode(this->out_pin, INPUT);
+acs712::acs712( byte pin ) : pin(pin) {
+  pinMode(this->pin, INPUT);
 }
 
-float Acs712::getCurrent() {
-  float current;
+float acs712::getvolts() {
+  return (analogRead(pin) * converter);
+  //return (analogRead(pin) * converter) - 2.5f;
+}
 
-  current = (analogRead(out_pin) - 64) / 185.0;
-
-  return current;
+float acs712::getamps() {
+  return ( ((this->getvolts() -2.5f) *1000) / 185.f); //miliamperes
+  //return (this->getvolts() / 185.f); //miliamperes
 }
