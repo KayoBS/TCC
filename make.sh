@@ -11,6 +11,12 @@ mv code/sensitive_layer/acs712/*.* ./ardun_main_code/
 mv code/sensitive_layer/voltage_divider_metrics/*.* ./ardun_main_code/
 mv code/sensitive_layer/voltage_reader/*.* ./ardun_main_code
 
+# arquivo do led necessario no teste com o thingspeak
+mv code/action_layer/led/*.* ./esp32_main_code
+
+# credenciais (devem ser reconfigurados de acordo com a situacao)
+mv code/security_credentials/*.* ./esp32_main_code
+
 # tipos de dados e métodos de ordenação
 mv code/data_and_algorithms/ordenation_methods/*.* ./ardun_main_code
 mv code/data_and_algorithms/consts/consts.h ./ardun_main_code
