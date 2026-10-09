@@ -1,3 +1,13 @@
+/*
+Nota de 9 de Outubro de 2026.
+
+Creditos para o canal CURIOSIDADES E ELTRÔNICA por mostrar o código que foi usado como
+base para o código de teste da a validação da comunicação com o ThingSpeak.
+URL: https://www.youtube.com/watch?v=GnX2Hd9ezxU&t=119s
+
+CURIOSIDADES E ELETRÔNICA. Conectando o ESP32 na Cloud ThingSpeak para realizar leitura e escrita de dados. , 2021. Disponível em: <https://www.youtube.com/watch?v=GnX2Hd9ezxU>. Acesso em: 9 out. 2026
+*/
+
 #include <WiFi.h>
 #include <ThingSpeak.h>
 #include "credentials.h"
